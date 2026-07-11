@@ -5,6 +5,8 @@
     "scripts": {
         "format": "prettier . --write",
         "format:check": "prettier . --check",
+        "docker:build": "docker build -t cicd:v1 .",
+        "docker:run": "docker run -p 3000:3000 --init --rm cicd:v1",
         "lint": "npx eslint .",
         "lint:fix": "npx eslint . --fix",
         "start": "node server.js",
